@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= render 'shared/old/head', stylesheet: "blogs" %>
+  </head>
+
+  <body>
+    <%#= render 'shared/old/navbar' %>
+
+    <%= render 'shared/blog_nav' %>
+    <%= render 'shared/blog_masthead' %>
+
+    <div class="container">
+
+      <div class="row">
+
+        <%= yield %>
+
+        <%= render 'shared/blog_sidebar' %>
+      </div>
+
+      <%= render 'shared/blog_footer' %>
+
+      <%= alerts %>
+    </div>
+    <%= javascript_include_tag 'gritter.min' %>
+  </body>
+
+</html>

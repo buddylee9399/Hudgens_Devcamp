@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: portfolios
+#
+#  id         :integer          not null, primary key
+#  body       :text
+#  position   :integer
+#  subtitle   :string
+#  title      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+one:
+  title: MyString
+  subtitle: MyString
+  body: MyText
+  position: 1
+
+two:
+  title: MyString
+  subtitle: MyString
+  body: MyText
+  position: 1

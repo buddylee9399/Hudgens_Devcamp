@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= render 'shared/head' %>
+    <%= render 'shared/old/head', stylesheet: "application" %>
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <div class="container">
-      <%= yield %>      
+    <%#= render 'shared/old/navbar' %>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+
+          <%= video_tag(
+              'HardDrivePhotojpeg.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'home_bg.png'
+            )
+            %>
+
+          <div class="container">
+            <%= render "shared/application_nav" %>
+          </div>
+
+          <%= yield %>
+
+          <%= render "shared/application_footer" %>
+
+          <%= alerts %>
+
+        </div>
+      </div>
     </div>
-    <%= render 'shared/footer' %>   
+    <%= javascript_include_tag 'gritter.min' %>
   </body>
 
 </html>
